@@ -176,18 +176,16 @@ export const ProductCard = ({ laptop, onNavigate, onAddToCart, onWishlist, wishl
 };
 
 // ─── NAVBAR ──────────────────────────────────────────────────
-export const Navbar = ({ page, onNavigate, cartCount, wishlistCount, user, darkMode, setDarkMode, allowedPages = null }) => {
+export const Navbar = ({ page, onNavigate, cartCount, wishlistCount, user, darkMode, setDarkMode }) => {
   const dm = darkMode;
   const [searchVal, setSearchVal] = useState("");
-  const allNavLinks = [
+  const navLinks = [
     { label:"Home", page:"home" },
     { label:"Products", page:"catalog" },
     { label:"Categories", page:"category" },
     { label:"Promos", page:"promos" },
     { label:"Help", page:"help" },
   ];
-  const canOpen = (target) => !allowedPages || allowedPages.includes(target);
-  const navLinks = allNavLinks.filter(l => canOpen(l.page));
 
   return (
     <nav style={{
@@ -270,11 +268,11 @@ export const Navbar = ({ page, onNavigate, cartCount, wishlistCount, user, darkM
 
         {/* Right actions */}
         <div style={{ display:"flex", alignItems:"center", gap:4, marginLeft:"auto" }}>
-          {canOpen("wishlist") && <NavIconBtn icon="heart" count={wishlistCount} onClick={() => onNavigate("wishlist")} dm={dm} />}
-          {canOpen("cart") && <NavIconBtn icon="cart"  count={cartCount}     onClick={() => onNavigate("cart")}     dm={dm} />}
+          <NavIconBtn icon="heart" count={wishlistCount} onClick={() => onNavigate("wishlist")} dm={dm} />
+          <NavIconBtn icon="cart"  count={cartCount}     onClick={() => onNavigate("cart")}     dm={dm} />
           {user ? (
             <button
-              onClick={() => onNavigate(canOpen("profile") ? "profile" : "home")}
+              onClick={() => onNavigate("profile")}
               style={{
                 display:"flex", alignItems:"center", gap:8, padding:"6px 14px",
                 borderRadius:10, border:`1.5px solid ${dm ? "#334155" : "#e2e8f0"}`,
@@ -295,7 +293,7 @@ export const Navbar = ({ page, onNavigate, cartCount, wishlistCount, user, darkM
             </button>
           ) : (
             <button
-              onClick={() => onNavigate(canOpen("login") ? "login" : "home")}
+              onClick={() => onNavigate("login")}
               style={{
                 padding:"7px 16px", borderRadius:10,
                 background:"linear-gradient(135deg,#2563eb,#3b82f6)",
@@ -338,19 +336,7 @@ const NavIconBtn = ({ icon, count, onClick, dm }) => (
 );
 
 // ─── FOOTER ──────────────────────────────────────────────────
-export const Footer = ({ onNavigate, dm, allowedPages = null }) => {
-  const canOpen = (target) => !allowedPages || allowedPages.includes(target);
-  const footerColumns = [
-    { title:"Shop",    links:["Home","All Laptops","Categories","Promos"] },
-    { title:"Support", links:["Help Center","Track Order","Returns","Warranty"] },
-    { title:"Company", links:["About Us","Blog","Careers","Press"] },
-  ];
-  const toPage = (l) => (
-    l === "Home" ? "home" : l === "All Laptops" ? "catalog" :
-    l === "Categories" ? "category" : l === "Promos" ? "promos" :
-    l === "Help Center" ? "help" : l === "Track Order" ? "orders" : "home"
-  );
-  return (
+export const Footer = ({ onNavigate, dm }) => (
   <footer style={{
     background:"#0f172a",
     borderTop:"1px solid #1e293b",
@@ -381,7 +367,11 @@ export const Footer = ({ onNavigate, dm, allowedPages = null }) => {
             Indonesia's trusted laptop marketplace. Premium quality, guaranteed authentic.
           </p>
         </div>
-        {footerColumns.map(col => ({ ...col, links: col.links.filter(l => canOpen(toPage(l))) })).filter(col => col.links.length > 0).map(col => (
+        {[
+          { title:"Shop",    links:["Home","All Laptops","Categories","Promos"] },
+          { title:"Support", links:["Help Center","Track Order","Returns","Warranty"] },
+          { title:"Company", links:["About Us","Blog","Careers","Press"] },
+        ].map(col => (
           <div key={col.title}>
             <div style={{
               fontSize:13, fontWeight:700, color:"#94a3b8",
@@ -390,7 +380,11 @@ export const Footer = ({ onNavigate, dm, allowedPages = null }) => {
             {col.links.map(l => (
               <button
                 key={l}
-                onClick={() => onNavigate(toPage(l))}
+                onClick={() => onNavigate(
+                  l === "Home" ? "home" : l === "All Laptops" ? "catalog" :
+                  l === "Categories" ? "category" : l === "Promos" ? "promos" :
+                  l === "Help Center" ? "help" : "home"
+                )}
                 style={{
                   display:"block", background:"none", border:"none",
                   color:"#64748b", fontSize:13, padding:"3px 0",
@@ -411,8 +405,7 @@ export const Footer = ({ onNavigate, dm, allowedPages = null }) => {
       </div>
     </div>
   </footer>
-  );
-};
+);
 
 // ─── AUTH INPUT ──────────────────────────────────────────────
 export const AuthInput = ({ label, type, value, onChange, placeholder, dm }) => (

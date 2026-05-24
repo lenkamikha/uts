@@ -1,7 +1,3 @@
-// ============================================================
-//  LAPSTORE MARKETPLACE — ORANG 2 - CATALOG DETAIL SEARCH
-//  Base + file pembagian orang ini saja
-// ============================================================
 import { useState } from "react";
 import { CatalogPage, ProductDetailPage, SearchPage } from "./pages/orang2_catalog_detail_search";
 import { LAPTOPS } from "./shared/shared_data";

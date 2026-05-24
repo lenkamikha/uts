@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "lapstore-orang1",
 =======
   "name": "lapstore-orang2",
@@ -8,6 +9,9 @@
 =======
   "name": "lapstore-orang3",
 >>>>>>> origin/Punya-Fathur
+=======
+  "name": "lapstore-orang4",
+>>>>>>> Punya-Ade
   "private": true,
   "version": "1.0.0",
   "type": "module",

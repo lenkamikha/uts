@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //  LAPSTORE MARKETPLACE — ORANG 1 - HOME LOGIN REGISTER
 //  Base + file pembagian orang ini saja
 // ============================================================
@@ -56,6 +57,20 @@ const MODE_DESC = "Payment Success, Order History, dan Wishlist Page.";
 const START_PAGE = "success";
 const ALLOWED_PAGES = ["base", "success", "orders", "wishlist"];
 >>>>>>> Punya-Ade
+=======
+//  LAPSTORE MARKETPLACE — ORANG 5 - PROFILE PROMOS HELP
+//  Base + file pembagian orang ini saja
+// ============================================================
+import { useState } from "react";
+import { ProfilePage, PromosPage, HelpPage } from "./pages/orang5_profile_promos_help";
+import { LAPTOPS } from "./shared/shared_data";
+import { Navbar, Footer, Icon } from "./shared/shared_components";
+
+const MODE_LABEL = "ORANG5";
+const MODE_DESC = "User Profile, Promos & Discounts, dan Help Center.";
+const START_PAGE = "profile";
+const ALLOWED_PAGES = ["base", "profile", "promos", "help"];
+>>>>>>> origin/Punya-Niko
 
 function BaseHome({ dm, onNavigate }) {
   const card = dm ? "#1e293b" : "#ffffff";
@@ -86,6 +101,7 @@ function BaseHome({ dm, onNavigate }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               Base siap untuk {MODE_LABEL}.
             </h1>
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
@@ -108,21 +124,32 @@ function BaseHome({ dm, onNavigate }) {
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
               kembali
 >>>>>>> Punya-Ade
+=======
+               {MODE_LABEL}.
+            </h1>
+            <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
+              a
+>>>>>>> origin/Punya-Niko
             </p>
             <button onClick={() => onNavigate(START_PAGE)} style={{
               marginTop:22, border:"none", borderRadius:14, padding:"13px 28px", cursor:"pointer",
               background:"linear-gradient(135deg,#2563eb,#06b6d4)", color:"#fff", fontWeight:900,
               boxShadow:"0 10px 28px rgba(37,99,235,.35)"
 <<<<<<< HEAD
+<<<<<<< HEAD
             }}>Buka halaman {MODE_LABEL} →</button>
 =======
             }}>Buka halaman Awal →</button>
 >>>>>>> Punya-Ade
+=======
+            }}>Buka halaman {MODE_LABEL} →</button>
+>>>>>>> origin/Punya-Niko
           </div>
         </div>
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -147,6 +174,12 @@ function BaseHome({ dm, onNavigate }) {
             ["Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
             [MODE_DESC],
 >>>>>>> Punya-Ade
+=======
+            ["tugas lain", "Router sederhana, state global, guard halaman, Navbar, Footer."],
+            ["tugas lain", "Data laptop, promo, brand, kategori, dan format harga."],
+            ["tugas lain", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
+            ["tugas lain", MODE_DESC],
+>>>>>>> origin/Punya-Niko
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -181,6 +214,7 @@ function PageLocked({ target, onNavigate, dm }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
@@ -203,15 +237,25 @@ function PageLocked({ target, onNavigate, dm }) {
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
           
 >>>>>>> Punya-Ade
+=======
+          Halaman “{target}” tidak tersedia di mode {MODE_LABEL}
+        </h2>
+        <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
+          tugas teman saia.
+>>>>>>> origin/Punya-Niko
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",
           background:"linear-gradient(135deg,#2563eb,#06b6d4)", color:"#fff", fontWeight:800,
 <<<<<<< HEAD
+<<<<<<< HEAD
         }}>Balik ke halaman {MODE_LABEL}</button>
 =======
         }}>Kembali ke Awal</button>
 >>>>>>> Punya-Ade
+=======
+        }}>Balik ke halaman {MODE_LABEL}</button>
+>>>>>>> origin/Punya-Niko
       </div>
     </div>
   );
@@ -242,6 +286,7 @@ export default function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [user, setUser] = useState("orang1" === "orang5" ? demoUser : null);
   const [cart, setCart] = useState(["orang3", "orang4"].includes("orang1") ? demoCart : []);
   const [wishlist, setWishlist] = useState("orang1" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
@@ -260,6 +305,11 @@ export default function App() {
   const [cart, setCart] = useState(["orang3", "orang4"].includes("orang4") ? demoCart : []);
   const [wishlist, setWishlist] = useState("orang4" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
 >>>>>>> Punya-Ade
+=======
+  const [user, setUser] = useState("orang5" === "orang5" ? demoUser : null);
+  const [cart, setCart] = useState(["orang3", "orang4"].includes("orang5") ? demoCart : []);
+  const [wishlist, setWishlist] = useState("orang5" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
+>>>>>>> origin/Punya-Niko
   const [darkMode, setDarkMode] = useState(false);
 
   const addToCart = (laptop) => {
@@ -299,6 +349,7 @@ export default function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       case "home": return <HomePage {...pageProps} />;
       case "login": return <LoginPage {...pageProps} />;
       case "register": return <RegisterPage {...pageProps} />;
@@ -317,6 +368,11 @@ export default function App() {
       case "orders": return <OrdersPage {...pageProps} />;
       case "wishlist": return <WishlistPage {...pageProps} />;
 >>>>>>> Punya-Ade
+=======
+      case "profile": return <ProfilePage {...pageProps} />;
+      case "promos": return <PromosPage {...pageProps} />;
+      case "help": return <HelpPage {...pageProps} />;
+>>>>>>> origin/Punya-Niko
       default: return <BaseHome dm={darkMode} onNavigate={navigate} />;
     }
   };

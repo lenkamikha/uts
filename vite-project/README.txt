@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 LAPSTORE — Orang 1 - Home Login Register
 =======
 LAPSTORE — Orang 3 - Category Cart Checkout
@@ -7,10 +8,14 @@ LAPSTORE — Orang 3 - Category Cart Checkout
 =======
 LAPSTORE — Orang 4 - Success Orders Wishlist
 >>>>>>> Punya-Ade
+=======
+LAPSTORE — Orang 5 - Profile Promos Help
+>>>>>>> origin/Punya-Niko
 
 Isi ZIP:
 - Base project Vite React
 - Shared data dan shared components
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 - File halaman khusus ORANG1: src/pages/orang1_home_login_register.jsx
@@ -35,11 +40,20 @@ Cara menjalankan:
 1. Extract ZIP ini
 2. Buka folder LapStore_orang4
 >>>>>>> Punya-Ade
+=======
+- File halaman khusus ORANG5: src/pages/orang5_profile_promos_help.jsx
+- App.jsx sudah disetel agar cuma membuka bagian ORANG5 + halaman base
+
+Cara menjalankan:
+1. Extract ZIP ini
+2. Buka folder LapStore_orang5
+>>>>>>> origin/Punya-Niko
 3. Jalankan:
    npm install
    npm run dev
 
 Bagian interface:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Home Page, Login Page, dan Register Page.
@@ -55,3 +69,9 @@ Payment Success, Order History, dan Wishlist Page.
 Catatan:
 Kalau klik menu halaman orang lain, aplikasi tidak error.
 >>>>>>> Punya-Ade
+=======
+User Profile, Promos & Discounts, dan Help Center.
+
+Catatan:
+Kalau klik menu halaman orang lain, aplikasi tidak error. Akan muncul halaman info bahwa halaman itu tidak ikut ZIP ini.
+>>>>>>> origin/Punya-Niko

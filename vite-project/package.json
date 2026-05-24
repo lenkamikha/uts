@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "lapstore-orang1",
 =======
   "name": "lapstore-orang2",
@@ -12,6 +13,9 @@
 =======
   "name": "lapstore-orang4",
 >>>>>>> Punya-Ade
+=======
+  "name": "lapstore-orang5",
+>>>>>>> origin/Punya-Niko
   "private": true,
   "version": "1.0.0",
   "type": "module",

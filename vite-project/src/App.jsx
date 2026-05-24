@@ -41,7 +41,7 @@ function BaseHome({ dm, onNavigate }) {
               Base siap untuk {MODE_LABEL}.
             </h1>
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
-              ZIP ini berisi base utama, shared data, shared components, dan file interface khusus pembagian orang ini saja.
+              ini adalah tampilan halaman saya
             </p>
             <button onClick={() => onNavigate(START_PAGE)} style={{
               marginTop:22, border:"none", borderRadius:14, padding:"13px 28px", cursor:"pointer",
@@ -53,10 +53,10 @@ function BaseHome({ dm, onNavigate }) {
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
-            ["src/App.jsx", "Router sederhana, state global, guard halaman, Navbar, Footer."],
-            ["src/shared/shared_data.js", "Data laptop, promo, brand, kategori, dan format harga."],
-            ["src/shared/shared_components.jsx", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
-            ["src/pages/orang3_category_cart_checkout.jsx", MODE_DESC],
+            ["Description", "Router sederhana, state global, guard halaman, Navbar, Footer."],
+            ["Halaman", "Data laptop, promo, brand, kategori, dan format harga."],
+            ["Komponen", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
+            ["Category", MODE_DESC],
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -88,10 +88,10 @@ function PageLocked({ target, onNavigate, dm }) {
       <div style={{ maxWidth:520, textAlign:"center", background:dm?"#1e293b":"#fff", border:`1px solid ${dm?"#334155":"#e2e8f0"}`, borderRadius:22, padding:32 }}>
         <div style={{ fontSize:54, marginBottom:12 }}>🚧</div>
         <h2 style={{ color:dm?"#f1f5f9":"#0f172a", fontSize:22, fontWeight:900, marginBottom:8 }}>
-          Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
+          Halaman “{target}”  {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
-          Ini sengaja dipisah supaya tiap orang cuma pegang base dan bagian tugasnya sendiri.
+          ini tugas.
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",

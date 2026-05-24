@@ -1,5 +1,6 @@
 // ============================================================
 <<<<<<< HEAD
+<<<<<<< HEAD
 //  LAPSTORE MARKETPLACE — ORANG 1 - HOME LOGIN REGISTER
 //  Base + file pembagian orang ini saja
 // ============================================================
@@ -26,6 +27,20 @@ const MODE_DESC = "";
 const START_PAGE = "catalog";
 const ALLOWED_PAGES = ["base", "catalog", "product", "search"];
 >>>>>>> origin/punya-Atha
+=======
+//  LAPSTORE MARKETPLACE — ORANG 3 - CATEGORY CART CHECKOUT
+//  Base + file pembagian orang ini saja
+// ============================================================
+import { useState } from "react";
+import { CategoryPage, CartPage, CheckoutPage } from "./pages/orang3_category_cart_checkout";
+import { LAPTOPS } from "./shared/shared_data";
+import { Navbar, Footer, Icon } from "./shared/shared_components";
+
+const MODE_LABEL = "ORANG3";
+const MODE_DESC = "Category Page, Shopping Cart, dan Checkout Page.";
+const START_PAGE = "category";
+const ALLOWED_PAGES = ["base", "category", "cart", "checkout"];
+>>>>>>> origin/Punya-Fathur
 
 function BaseHome({ dm, onNavigate }) {
   const card = dm ? "#1e293b" : "#ffffff";
@@ -54,6 +69,7 @@ function BaseHome({ dm, onNavigate }) {
             </span>
             <h1 style={{ color:"#fff", fontSize:"clamp(2rem,5vw,3.6rem)", lineHeight:1.1, margin:"22px 0 12px", fontWeight:900 }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
               Base siap untuk {MODE_LABEL}.
             </h1>
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
@@ -64,6 +80,12 @@ function BaseHome({ dm, onNavigate }) {
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
               balik balik balik balik
 >>>>>>> origin/punya-Atha
+=======
+              Base siap untuk {MODE_LABEL}.
+            </h1>
+            <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
+              ini adalah tampilan halaman saya
+>>>>>>> origin/Punya-Fathur
             </p>
             <button onClick={() => onNavigate(START_PAGE)} style={{
               marginTop:22, border:"none", borderRadius:14, padding:"13px 28px", cursor:"pointer",
@@ -76,6 +98,7 @@ function BaseHome({ dm, onNavigate }) {
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
 <<<<<<< HEAD
+<<<<<<< HEAD
             ["Search", "Router sederhana, state global, guard halaman, Navbar, Footer."],
             ["Shared", "Data laptop, promo, brand, kategori, dan format harga."],
             ["SharedComponents", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
@@ -85,6 +108,12 @@ function BaseHome({ dm, onNavigate }) {
             [""],
             ["", MODE_DESC],
 >>>>>>> origin/punya-Atha
+=======
+            ["Description", "Router sederhana, state global, guard halaman, Navbar, Footer."],
+            ["Halaman", "Data laptop, promo, brand, kategori, dan format harga."],
+            ["Komponen", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
+            ["Category", MODE_DESC],
+>>>>>>> origin/Punya-Fathur
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -117,6 +146,7 @@ function PageLocked({ target, onNavigate, dm }) {
         <div style={{ fontSize:54, marginBottom:12 }}>🚧</div>
         <h2 style={{ color:dm?"#f1f5f9":"#0f172a", fontSize:22, fontWeight:900, marginBottom:8 }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
           Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
@@ -127,6 +157,12 @@ function PageLocked({ target, onNavigate, dm }) {
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
           Balik oit
 >>>>>>> origin/punya-Atha
+=======
+          Halaman “{target}”  {MODE_LABEL}
+        </h2>
+        <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
+          ini tugas.
+>>>>>>> origin/Punya-Fathur
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",
@@ -160,6 +196,7 @@ export default function App() {
   const demoCart = LAPTOPS.slice(0, 2).map((item, idx) => ({ ...item, qty: idx + 1 }));
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [user, setUser] = useState("orang1" === "orang5" ? demoUser : null);
   const [cart, setCart] = useState(["orang3", "orang4"].includes("orang1") ? demoCart : []);
   const [wishlist, setWishlist] = useState("orang1" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
@@ -168,6 +205,11 @@ export default function App() {
   const [cart, setCart] = useState(["orang3", "orang4"].includes("orang2") ? demoCart : []);
   const [wishlist, setWishlist] = useState("orang2" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
 >>>>>>> origin/punya-Atha
+=======
+  const [user, setUser] = useState("orang3" === "orang5" ? demoUser : null);
+  const [cart, setCart] = useState(["orang3", "orang4"].includes("orang3") ? demoCart : []);
+  const [wishlist, setWishlist] = useState("orang3" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
+>>>>>>> origin/Punya-Fathur
   const [darkMode, setDarkMode] = useState(false);
 
   const addToCart = (laptop) => {
@@ -205,6 +247,7 @@ export default function App() {
       case "base": return <BaseHome dm={darkMode} onNavigate={navigate} />;
       case "locked": return <PageLocked target={blockedPage} onNavigate={navigate} dm={darkMode} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
       case "home": return <HomePage {...pageProps} />;
       case "login": return <LoginPage {...pageProps} />;
       case "register": return <RegisterPage {...pageProps} />;
@@ -213,6 +256,11 @@ export default function App() {
       case "product": return <ProductDetailPage product={pageParams || LAPTOPS[0]} {...pageProps} />;
       case "search": return <SearchPage query={pageParams?.query || "asus"} {...pageProps} />;
 >>>>>>> origin/punya-Atha
+=======
+      case "category": return <CategoryPage params={pageParams} {...pageProps} />;
+      case "cart": return <CartPage {...pageProps} />;
+      case "checkout": return <CheckoutPage {...pageProps} />;
+>>>>>>> origin/Punya-Fathur
       default: return <BaseHome dm={darkMode} onNavigate={navigate} />;
     }
   };

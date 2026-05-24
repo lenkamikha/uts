@@ -8,7 +8,7 @@ import { LAPTOPS } from "./shared/shared_data";
 import { Navbar, Footer, Icon } from "./shared/shared_components";
 
 const MODE_LABEL = "ORANG2";
-const MODE_DESC = "Product Catalog, Product Detail, dan Search Result.";
+const MODE_DESC = "";
 const START_PAGE = "catalog";
 const ALLOWED_PAGES = ["base", "catalog", "product", "search"];
 
@@ -38,10 +38,10 @@ function BaseHome({ dm, onNavigate }) {
               <Icon name="shield" size={15} /> LapStore Base Project
             </span>
             <h1 style={{ color:"#fff", fontSize:"clamp(2rem,5vw,3.6rem)", lineHeight:1.1, margin:"22px 0 12px", fontWeight:900 }}>
-              Base siap untuk {MODE_LABEL}.
+              balik balik {MODE_LABEL}.
             </h1>
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
-              ZIP ini berisi base utama, shared data, shared components, dan file interface khusus pembagian orang ini saja.
+              balik balik balik balik
             </p>
             <button onClick={() => onNavigate(START_PAGE)} style={{
               marginTop:22, border:"none", borderRadius:14, padding:"13px 28px", cursor:"pointer",
@@ -53,10 +53,9 @@ function BaseHome({ dm, onNavigate }) {
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
-            ["src/App.jsx", "Router sederhana, state global, guard halaman, Navbar, Footer."],
-            ["src/shared/shared_data.js", "Data laptop, promo, brand, kategori, dan format harga."],
-            ["src/shared/shared_components.jsx", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
-            ["src/pages/orang2_catalog_detail_search.jsx", MODE_DESC],
+            [""],
+            [""],
+            ["", MODE_DESC],
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -88,10 +87,10 @@ function PageLocked({ target, onNavigate, dm }) {
       <div style={{ maxWidth:520, textAlign:"center", background:dm?"#1e293b":"#fff", border:`1px solid ${dm?"#334155":"#e2e8f0"}`, borderRadius:22, padding:32 }}>
         <div style={{ fontSize:54, marginBottom:12 }}>🚧</div>
         <h2 style={{ color:dm?"#f1f5f9":"#0f172a", fontSize:22, fontWeight:900, marginBottom:8 }}>
-          Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
+          Halaman “{target}” balik balik balik lmao banget kang {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
-          Ini sengaja dipisah supaya tiap orang cuma pegang base dan bagian tugasnya sendiri.
+          Balik oit
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",

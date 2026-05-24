@@ -53,10 +53,10 @@ function BaseHome({ dm, onNavigate }) {
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
-            ["src/App.jsx", "Router sederhana, state global, guard halaman, Navbar, Footer."],
-            ["src/shared/shared_data.js", "Data laptop, promo, brand, kategori, dan format harga."],
-            ["src/shared/shared_components.jsx", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
-            ["src/pages/orang1_home_login_register.jsx", MODE_DESC],
+            ["Search", "Router sederhana, state global, guard halaman, Navbar, Footer."],
+            ["Shared", "Data laptop, promo, brand, kategori, dan format harga."],
+            ["SharedComponents", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
+            ["Login Register ", MODE_DESC],
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -91,7 +91,7 @@ function PageLocked({ target, onNavigate, dm }) {
           Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
-          Ini sengaja dipisah supaya tiap orang cuma pegang base dan bagian tugasnya sendiri.
+          
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",

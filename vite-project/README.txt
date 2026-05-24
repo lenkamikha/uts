@@ -17,4 +17,4 @@ Bagian interface:
 Payment Success, Order History, dan Wishlist Page.
 
 Catatan:
-Kalau klik menu halaman orang lain, aplikasi tidak error. Akan muncul halaman info bahwa halaman itu tidak ikut ZIP ini.
+Kalau klik menu halaman orang lain, aplikasi tidak error.

@@ -1,4 +1,5 @@
 // ============================================================
+<<<<<<< HEAD
 //  LAPSTORE MARKETPLACE — ORANG 1 - HOME LOGIN REGISTER
 //  Base + file pembagian orang ini saja
 // ============================================================
@@ -11,6 +12,20 @@ const MODE_LABEL = "ORANG1";
 const MODE_DESC = "Home Page, Login Page, dan Register Page.";
 const START_PAGE = "home";
 const ALLOWED_PAGES = ["base", "home", "login", "register"];
+=======
+//  LAPSTORE MARKETPLACE — ORANG 2 - CATALOG DETAIL SEARCH
+//  Base + file pembagian orang ini saja
+// ============================================================
+import { useState } from "react";
+import { CatalogPage, ProductDetailPage, SearchPage } from "./pages/orang2_catalog_detail_search";
+import { LAPTOPS } from "./shared/shared_data";
+import { Navbar, Footer, Icon } from "./shared/shared_components";
+
+const MODE_LABEL = "ORANG2";
+const MODE_DESC = "";
+const START_PAGE = "catalog";
+const ALLOWED_PAGES = ["base", "catalog", "product", "search"];
+>>>>>>> origin/punya-Atha
 
 function BaseHome({ dm, onNavigate }) {
   const card = dm ? "#1e293b" : "#ffffff";
@@ -38,10 +53,17 @@ function BaseHome({ dm, onNavigate }) {
               <Icon name="shield" size={15} /> LapStore Base Project
             </span>
             <h1 style={{ color:"#fff", fontSize:"clamp(2rem,5vw,3.6rem)", lineHeight:1.1, margin:"22px 0 12px", fontWeight:900 }}>
+<<<<<<< HEAD
               Base siap untuk {MODE_LABEL}.
             </h1>
             <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
               ZIP ini berisi base utama, shared data, shared components, dan file interface khusus pembagian orang ini saja.
+=======
+              balik balik {MODE_LABEL}.
+            </h1>
+            <p style={{ color:"#bfdbfe", fontSize:16, lineHeight:1.7, maxWidth:700 }}>
+              balik balik balik balik
+>>>>>>> origin/punya-Atha
             </p>
             <button onClick={() => onNavigate(START_PAGE)} style={{
               marginTop:22, border:"none", borderRadius:14, padding:"13px 28px", cursor:"pointer",
@@ -53,10 +75,16 @@ function BaseHome({ dm, onNavigate }) {
 
         <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:16 }}>
           {[
+<<<<<<< HEAD
             ["Search", "Router sederhana, state global, guard halaman, Navbar, Footer."],
             ["Shared", "Data laptop, promo, brand, kategori, dan format harga."],
             ["SharedComponents", "Komponen umum seperti Navbar, ProductCard, Footer, Breadcrumb."],
             ["Login Register ", MODE_DESC],
+=======
+            [""],
+            [""],
+            ["", MODE_DESC],
+>>>>>>> origin/punya-Atha
           ].map(([title, desc]) => (
             <div key={title} style={{ background:card, border:`1px solid ${border}`, borderRadius:18, padding:20 }}>
               <div style={{ color:"#2563eb", fontWeight:900, fontSize:14, marginBottom:8 }}>{title}</div>
@@ -88,10 +116,17 @@ function PageLocked({ target, onNavigate, dm }) {
       <div style={{ maxWidth:520, textAlign:"center", background:dm?"#1e293b":"#fff", border:`1px solid ${dm?"#334155":"#e2e8f0"}`, borderRadius:22, padding:32 }}>
         <div style={{ fontSize:54, marginBottom:12 }}>🚧</div>
         <h2 style={{ color:dm?"#f1f5f9":"#0f172a", fontSize:22, fontWeight:900, marginBottom:8 }}>
+<<<<<<< HEAD
           Halaman “{target}” tidak ikut ZIP {MODE_LABEL}
         </h2>
         <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
           
+=======
+          Halaman “{target}” balik balik balik lmao banget kang {MODE_LABEL}
+        </h2>
+        <p style={{ color:"#94a3b8", fontSize:14, lineHeight:1.7, marginBottom:20 }}>
+          Balik oit
+>>>>>>> origin/punya-Atha
         </p>
         <button onClick={() => onNavigate(START_PAGE)} style={{
           border:"none", borderRadius:12, padding:"12px 22px", cursor:"pointer",
@@ -124,9 +159,15 @@ export default function App() {
   const demoUser = { name:"Mika Saleem", email:"mika@student.demo" };
   const demoCart = LAPTOPS.slice(0, 2).map((item, idx) => ({ ...item, qty: idx + 1 }));
 
+<<<<<<< HEAD
   const [user, setUser] = useState("orang1" === "orang5" ? demoUser : null);
   const [cart, setCart] = useState(["orang3", "orang4"].includes("orang1") ? demoCart : []);
   const [wishlist, setWishlist] = useState("orang1" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
+=======
+  const [user, setUser] = useState("orang2" === "orang5" ? demoUser : null);
+  const [cart, setCart] = useState(["orang3", "orang4"].includes("orang2") ? demoCart : []);
+  const [wishlist, setWishlist] = useState("orang2" === "orang4" ? LAPTOPS.slice(0, 4).map(l => l.id) : []);
+>>>>>>> origin/punya-Atha
   const [darkMode, setDarkMode] = useState(false);
 
   const addToCart = (laptop) => {
@@ -163,9 +204,15 @@ export default function App() {
     switch (page) {
       case "base": return <BaseHome dm={darkMode} onNavigate={navigate} />;
       case "locked": return <PageLocked target={blockedPage} onNavigate={navigate} dm={darkMode} />;
+<<<<<<< HEAD
       case "home": return <HomePage {...pageProps} />;
       case "login": return <LoginPage {...pageProps} />;
       case "register": return <RegisterPage {...pageProps} />;
+=======
+      case "catalog": return <CatalogPage {...pageProps} />;
+      case "product": return <ProductDetailPage product={pageParams || LAPTOPS[0]} {...pageProps} />;
+      case "search": return <SearchPage query={pageParams?.query || "asus"} {...pageProps} />;
+>>>>>>> origin/punya-Atha
       default: return <BaseHome dm={darkMode} onNavigate={navigate} />;
     }
   };

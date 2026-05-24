@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "lapstore-orang1",
+=======
+  "name": "lapstore-orang2",
+>>>>>>> origin/punya-Atha
   "private": true,
   "version": "1.0.0",
   "type": "module",

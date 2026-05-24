@@ -52,7 +52,7 @@ export const HomePage = ({ onNavigate, onAddToCart, onWishlist, wishlist, dm }) 
               WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent" }}>
               Impianmu
             </span>
-            {" "}di Saleem.id
+            {" "}di LapStore
           </h1>
 
           <p style={{ color:"#94a3b8", fontSize:17, marginBottom:36, lineHeight:1.75 }}>
